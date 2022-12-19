@@ -29,15 +29,11 @@ function myOrderSubmitted() {
     "order-for-customer"
   ).innerHTML = `Burger Price: $${burgerTypePrice.toFixed(
     2
-    )}</br>Fry Price: $${frySizePrice.toFixed(
-      2
-    )}</br>Drink Price: $${drinkTypePrice.toFixed(
-      2
-    )}</br>Your Total Is: $${subCost.toFixed(
+  )}</br>Fry Price: $${frySizePrice.toFixed(
     2
-    )} </br>Your Total With Tax (HST: 13%) Is: $${finalCost.toFixed(
+  )}</br>Drink Price: $${drinkTypePrice.toFixed(
     2
-  )}`
+  )}</br>Your Total Is: $${subCost.toFixed(
+    2
+  )} </br>Your Total With Tax (HST: 13%) Is: $${finalCost.toFixed(2)}`
 }
-
-  
