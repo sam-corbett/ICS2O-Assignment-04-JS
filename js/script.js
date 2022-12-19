@@ -20,9 +20,24 @@ if (navigator.serviceWorker) {
  */
 function myOrderSubmitted() {
   var burgerTypePrice = parseFloat(document.getElementById("burger-type").value)
-  var frySizePrice = parseFloat(document.getElementById("fry-type").value)
+  var frySizePrice = parseFloat(document.getElementById("fry-size").value)
   var drinkTypePrice = parseFloat(document.getElementById("drink-type").value)
-  var subtotal = coffeeSizePrice + extrasPrice
-  var finalPriceDiscount = subtotal + 0.13 * subtotal - 0.25 * subtotal
-  var finalPrice = subtotal + 0.13 * subtotal
+  var subCost = burgerTypePrice + frySizePrice + drinkTypePrice
+  var finalCost = subCost + 0.13 * subCost
+
+  document.getElementById(
+    "order-for-customer"
+  ).innerHTML = `Burger Price: $${burgerTypePrice.toFixed(
+    2
+    )}</br>Fry Price: $${frySizePrice.toFixed(
+      2
+    )}</br>Drink Price: $${drinkTypePrice.toFixed(
+      2
+    )}</br>Your Total Is: $${subCost.toFixed(
+    2
+    )} </br>Your Total With Tax (HST: 13%) Is: $${finalCost.toFixed(
+    2
+  )}`
 }
+
+  
