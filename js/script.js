@@ -24,35 +24,35 @@ function myOrderSubmitted() {
   var drinkTypePrice = parseFloat(document.getElementById("drink-type").value)
   var subCost = burgerTypePrice + frySizePrice + drinkTypePrice
   var finalCost = subCost + 0.13 * subCost
-  var finalCostDiscount = subCost + 0.13 * subCost - 0.50 * subCost
+  var finalCostDiscount = subCost + 0.13 * subCost - 0.5 * subCost
 
   if (subCost <= 19.75) {
     document.getElementById(
-    "order-for-customer"
-  ).innerHTML = `Burger Price: $${burgerTypePrice.toFixed(
-    2
+      "order-for-customer"
+    ).innerHTML = `Burger Price: $${burgerTypePrice.toFixed(
+      2
     )}</br>Fry Price: $${frySizePrice.toFixed(
       2
     )}</br>Drink Price: $${drinkTypePrice.toFixed(
       2
     )}</br>Your Total Is: $${subCost.toFixed(
-    2
+      2
     )} <= (below $19.75)</br>Your Total With Discount Is: $${finalCostDiscount.toFixed(
-    2
-  )}`
-} else {
-  document.getElementById(
-    "order-for-customer"
-  ).innerHTML = `Burger Price: $${burgerTypePrice.toFixed(
-    2
+      2
+    )}`
+  } else {
+    document.getElementById(
+      "order-for-customer"
+    ).innerHTML = `Burger Price: $${burgerTypePrice.toFixed(
+      2
     )}</br>Fry Price: $${frySizePrice.toFixed(
       2
     )}</br>Drink Price: $${drinkTypePrice.toFixed(
       2
     )}</br>Your Total Is: $${subCost.toFixed(
-    2
+      2
     )} <= (above $19.75)</br>Your Total With Tax (HST: 13%) Is: $${finalCost.toFixed(
-    2
-  )}`
- }
+      2
+    )}`
+  }
 }
